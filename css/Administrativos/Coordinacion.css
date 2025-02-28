@@ -1,0 +1,101 @@
+/* src/assets/css/Administrativos/Coordinacion.css */
+body {
+    font-family: 'Arial, sans-serif';
+    background: #39a900;
+    color: #fff;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+  
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px; /* Espacio superior dentro del contenedor */
+    margin-top: 15vh; /* Ajusta el margen superior para no tapar el contenido con la navbar */
+}
+  
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-image: url('../../img/Valoracion.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1000;
+    height: 25vh; /* Mantén la altura para pantallas más grandes */
+    border-bottom: 6px solid #000000;
+}
+  
+.navbar-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 20px;
+}
+  
+.coordinacion-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+  
+.coordinacion-images {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 20px;
+}
+  
+.coordinacion-item {
+    text-align: center;
+    margin: 20px; /* Aumentar el margen para separar más las imágenes */
+    cursor: pointer; /* Cambia el cursor a pointer para indicar clickeable */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para el efecto de hover */
+    width: 250px; /* Establece un ancho fijo para todos los botones */
+    height: 300px; /* Establece una altura fija para todos los botones */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centra verticalmente el contenido */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo ligeramente visible */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para un efecto de profundidad */
+    position: relative; /* Para el efecto de difuminado */
+    overflow: hidden; /* Para ocultar partes de la imagen que se salgan */
+}
+  
+.coordinacion-item:hover {
+    transform: scale(1.05); /* Aumenta el tamaño ligeramente al pasar el mouse */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al hacer hover */
+}
+
+/* Efecto de difuminado */
+.coordinacion-item img {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 200px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Mantiene la proporción de la imagen sin distorsionarse */
+    border-radius: 10px; /* Esquinas redondeadas */
+    filter: blur(2px); /* Aplica un desenfoque a la imagen */
+    transition: filter 0.3s ease; /* Transición suave para el desenfoque */
+}
+
+.coordinacion-item:hover img {
+    filter: blur(0); /* Elimina el desenfoque al pasar el mouse */
+}
+  
+.coordinacion-item h2 {
+    margin-top: 10px;
+    color: #fff; /* Cambiar color del texto para que sea legible */
+    transition: opacity 0.3s ease; /* Transición suave para la opacidad del texto */
+    opacity: 0; /* Comienza oculto */
+}
+
+.coordinacion-item:hover h2 {
+    opacity: 1; /* Muestra el texto al pasar el mouse */
+}

@@ -1,0 +1,17 @@
+{
+    "name": "cerik/encuesta-satisfaccion",
+    "autoload": {
+        "psr-4": {
+            "Cerik\\EncuestaSatisfaccion\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "darkmian939",
+            "email": "140548399+darkmian939@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "phpoffice/phpspreadsheet": "^3.4"
+    }
+}

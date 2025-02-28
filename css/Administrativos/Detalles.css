@@ -1,0 +1,159 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background: #39a900;
+  color: #fff;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  margin-top: 15vh;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 25vh;
+  background-image: url('../../img/Valoracion.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 6px solid #000;
+  z-index: 1000;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.encuesta-container {
+  width: 90%;
+  max-width: 1200px;
+  background: #fff;
+  color: #000;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.8s ease-out;
+  overflow: hidden; /* Asegura que el contenido extra no sobresalga */
+}
+
+/* Contenedor para la tabla */
+.table-container {
+  width: 100%;
+  max-width: 100%;
+  max-height: 400px; /* Limita la altura para que no ocupe demasiado espacio */
+  overflow-x: auto; /* Desplazamiento horizontal */
+  overflow-y: auto; /* Desplazamiento vertical */
+  border: 1px solid #ddd; /* Borde para definir límites */
+  border-radius: 8px;
+  margin-top: 20px;
+  background: #fff;
+}
+
+/* Tabla */
+table {
+  width: 100%;
+  min-width: 1200px; /* Asegura que las columnas no se compriman demasiado */
+  border-collapse: collapse;
+  animation: fadeIn 2s ease-in-out;
+}
+
+th, td {
+  text-align: center;
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+th {
+  background: #005f73;
+  color: white;
+  font-weight: bold;
+  position: sticky; /* Mantiene el encabezado fijo al hacer scroll */
+  top: 0;
+}
+
+td {
+  background: #f7f7f7;
+  transition: background-color 0.3s ease-in-out;
+}
+
+tr:hover td {
+  background: #e3f2fd;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  table {
+      font-size: 0.8rem;
+  }
+
+  h1 {
+      font-size: 2rem;
+  }
+
+  .encuesta-container {
+      padding: 15px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateY(-20px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+/* Barras de desplazamiento personalizadas */
+.table-container::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background: #005f73; /* Color del pulgar */
+  border-radius: 5px;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color del fondo */
+}
+
+.export-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.export-button:hover {
+  background-color: #45a049;
+}
